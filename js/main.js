@@ -16,7 +16,10 @@ function colorSelector(){
         let color = event.target.value
         if(color =="B"){
             box.className = "t-shirt-b"
+        }else{
+            box.className = "t-shirt-w"
         }
+
     })
 }
 
