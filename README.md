@@ -6,11 +6,17 @@ Create personalized t-shirts shop. Light webshop where the user can create their
 ## Features
 
 -design process, i.e. the user can see how the text will be displayed on the t-shirt. will be a maximum number of characters. 
+
 -gallery of example designs.
+
 -add to cart
+
 -remove/change cart
+
 -total sum (dependent on number of items in cart)
+
 -checkout process
+
 -thank you page
 
 
