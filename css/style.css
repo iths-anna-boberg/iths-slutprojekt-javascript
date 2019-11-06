@@ -18,6 +18,27 @@ h2{
     font-family: 'Crete Round', serif;
 }
 
+button{
+    background-color: darkslategrey;
+    color: white;
+    border: 0;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    font-family: 'Crete Round', serif;
+    font-size: 1.5rem;
+
+}
+
+select{
+    font-family: 'ABeeZee', sans-serif; 
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+option{
+    padding: 1rem;
+}
+
 .roboto{
     font-family: 'Roboto', sans-serif;
     font-size: 4vw;
@@ -70,6 +91,21 @@ h2{
     "bottom bottom right";
 }
 
+.t-shirt-b{
+    width: 1000px;
+    height: 1000px;
+    background-image: url(/img/black-shirt@1000x1000.png);
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 350px auto 350px;
+    grid-template-rows: 200px auto 250px;
+    grid-template-areas: 
+    "top top top"
+    "left text right"
+    "bottom bottom right";
+    color: white;
+}
+
 .text-box{
     grid-area: text;
     display: flex;
@@ -88,4 +124,8 @@ h2{
 
 .add-btn-container{
     padding: 2rem;
+}
+
+.color-selector{
+    margin-bottom: 1rem;
 }

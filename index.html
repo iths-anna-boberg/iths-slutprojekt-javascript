@@ -25,18 +25,23 @@
             <p>Is this a text? Is this a text? Yes this is a text.</p>
         </section>
         <section class="create-design">
-            <article class="t-shirt-w">
+            <select class="color-selector" name="color" id="color-selector">
+                <option value="default">Choose color:</option>
+                <option value="W">White</option>
+                <option value="B">Black</option>
+            </select>
+            <article id="t-shirt-box" class="t-shirt-w">
                 <div class="text-box"><p class="roboto">Awesome quote by you</p></div>
             </article>
             <div class="options-bar">
                 <div class="sizing">
-                    <p>Choose size:</p>
-                    <ul class="size-drop-down">
-                        <li>S</li>
-                        <li>M</li>
-                        <li>L</li>
-                        <li>XL</li>
-                    </ul>
+                    <select name="Size" id="size-selector">
+                        <option value="not">Select size:</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
                 </div>
                 <div class="add-btn-container">
                     <button>Add to cart</button>
