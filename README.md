@@ -1,7 +1,7 @@
 # Slutprojekt JavaScript
 
 ## Description
-Create personalized t-shirts shop. Light webshop where the user can create their own printed t-shirts with their own text. Shop will display example gallery. User can choose between black and white t-shirt, see their text they typed in and then "order it".
+Create personalized t-shirts shop. Light webshop where the user can create their own printed t-shirts with their own text. Shop will display example gallery. User can choose between black and white t-shirt, see the text they typed in and then "order it".
 
 ## Features
 
