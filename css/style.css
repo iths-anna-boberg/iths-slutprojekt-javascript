@@ -57,13 +57,13 @@ h3{
 .cc-qty{
     grid-area: counter;
     display: flex;
-    max-height: 2rem;
-    width: 10%;
+    /* max-height: 2rem;
+    width: 10%; */
     justify-content: center;
     align-items: center;
     font-family: 'Crete Round', serif;
     font-size: 1.8rem;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 .cc-color{
