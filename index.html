@@ -26,23 +26,25 @@
                     <div class="cart-header"><h2>Your cart</h2></div>
                     <div class="item-container">
                         <p class="cc-item">"Quotes are stupid"</p>
-                    <div class="specifics">
-                        <div class="cc-qty">
-                            <button id="minus" class="count-btn">-</button>
-                            <p id="qty">1</p>
-                            <button id="plus" class="count-btn">+</button>
-                        </div>
+                        <div class="specifics">
+                            <div class="cc-qty">
+                                <button id="minus" class="count-btn">-</button>
+                                <p id="qty">1</p>
+                                <button id="plus" class="count-btn">+</button>
+                            </div>
                             <div class="cc-color"><p>Color: W</p></div>
-                            <div class="cc-size"><p>Size: L</p></div>
-                        <div class="cc-price"><p id="item-sum">€21</p></div>
+                            <div class="cc-size"><p>Size:L</p></div>
+                            <div class="cc-price"><p id="item-sum">€21</p></div>
+                        </div>
+                        <p class="remove">Remove</p>
                     </div>
-                    <p class="remove">Remove</p>
-                </div>
                 </article>
                 <article class="cart-footer">
-                    <p class="shipping"><h3>Shipping:</h3>€6</p>
-                    <p class="total-sum"><h3>Total:</h3>€27</p>
-                    <button class="checkout-btn">CHECKOUT</button>
+                    <h3>Shipping:</h3>
+                    <p class="shipping">€6</p>
+                    <h3>Total:</h3>
+                    <p class="total-sum">€27</p>
+                    <button class="btn checkout-btn">CHECKOUT</button>
                 </article>
             </div>
         </section>
@@ -51,11 +53,16 @@
             <p>Is this a text? Is this a text? Yes this is a text.</p>
         </section>
         <section class="create-design">
-            <select class="color-selector" name="color" id="color-selector">
-                <option value="default">Choose color:</option>
-                <option value="W">White</option>
-                <option value="B">Black</option>
-            </select>
+            <div class="select-container">
+                <select class="color-selector" name="color" id="color-selector">
+                    <option value="default">Choose color:</option>
+                    <option value="W">White</option>
+                    <option value="B">Black</option>
+                </select>
+                <div class="price-display">
+                    <p class="cc-price cc-price-sticker">€21</p>
+                </div>
+            </div>
             <article id="t-shirt-box" class="t-shirt-w">
                 <div class="text-box"><p class="roboto">Awesome quote by you</p></div>
             </article>

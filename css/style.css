@@ -31,7 +31,10 @@ h3{
     padding: 1rem;
     font-family: 'Crete Round', serif;
     font-size: 1.5rem;
+}
 
+.checkout-btn{
+    width: 100%;
 }
 
 .count-btn{
@@ -46,12 +49,13 @@ h3{
 }
 
 .specifics{
+    width: 100%;
     display: grid;
-    grid-template-columns: 50% 20% 30%;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70% 30%;
     grid-template-areas: 
-    "counter specifics price"
-    ". specificsb price";
+    "counter price"
+    "specifics specificsb";
 }
 
 .cc-qty{
@@ -68,16 +72,41 @@ h3{
 
 .cc-color{
     grid-area: specifics;
+    display: flex;
+    justify-content: center;
 }
+
 .cc-size{
     grid-area: specificsb;
+    display: flex;
+    justify-content: center;
 }
+
 .cc-price{
     grid-area: price;
+    font-family: 'Crete Round', serif;
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.cc-price-sticker{
+    text-align: center;
+    border-radius: 50%;
+    padding: 1rem;
+    border: 1.5px solid black;
+}
+
+.remove{
+    text-decoration: underline;
+}
+
+.select-container{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
 }
 
 select{
@@ -186,11 +215,36 @@ option{
     justify-content: flex-end;    
 }
 
+.cart-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .your-cart{
-    width: 30%;
+    width: 40%;
     margin-top: 1rem;
     background-color: beige;
     padding: 1rem;
     display: flex;
     flex-direction: column;
+}
+
+.item-container{
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cc-item{
+    font-size: 2rem;
+}
+
+.cart-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
