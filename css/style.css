@@ -18,7 +18,12 @@ h2{
     font-family: 'Crete Round', serif;
 }
 
-button{
+h3{
+    font-family: 'Crete Round', serif;
+
+}
+
+.btn{
     background-color: darkslategrey;
     color: white;
     border: 0;
@@ -27,6 +32,52 @@ button{
     font-family: 'Crete Round', serif;
     font-size: 1.5rem;
 
+}
+
+.count-btn{
+    background-color: white;
+    font-size: 1.5rem;
+    margin: 0.4rem 0.6rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.count-btn:hover{
+    cursor: pointer;
+}
+
+.specifics{
+    display: grid;
+    grid-template-columns: 50% 20% 30%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "counter specifics price"
+    ". specificsb price";
+}
+
+.cc-qty{
+    grid-area: counter;
+    display: flex;
+    max-height: 2rem;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Crete Round', serif;
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+
+.cc-color{
+    grid-area: specifics;
+}
+.cc-size{
+    grid-area: specificsb;
+}
+.cc-price{
+    grid-area: price;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 select{
@@ -58,7 +109,7 @@ option{
     justify-content: flex-end;
 }
 
-.cart-content{
+.cart-counter{
     font-size: 0.7rem;
     font-weight: bold;
     background-color: aqua;
@@ -68,7 +119,6 @@ option{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .create-design{
@@ -128,4 +178,19 @@ option{
 
 .color-selector{
     margin-bottom: 1rem;
+}
+
+.show-cart-contents{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;    
+}
+
+.your-cart{
+    width: 30%;
+    margin-top: 1rem;
+    background-color: beige;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }

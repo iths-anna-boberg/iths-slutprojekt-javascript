@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=ABeeZee|Crete+Round|Permanent+Marker|Roboto:700&display=swap" rel="stylesheet">
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee|Crete+Round|Permanent+Marker|Roboto:700&display=swap" rel="stylesheet">
     <title>Crea-tee</title>
 </head>
 <body>
@@ -17,8 +17,34 @@
     </header>
     <div class="wrapper">
         <section class="shopping-cart">
-                <i class="material-icons">shopping_cart</i>
-                <div class="cart-content"><span id="counter">0</span></div>                        
+            <i class="material-icons">shopping_cart</i>
+            <div class="cart-counter"><span id="counter">0</span></div>                        
+        </section>
+        <section class="show-cart-contents">
+            <div class="your-cart">
+                <article class="cart-content">
+                    <div class="cart-header"><h2>Your cart</h2></div>
+                    <div class="item-container">
+                        <p class="cc-item">"Quotes are stupid"</p>
+                    <div class="specifics">
+                        <div class="cc-qty">
+                            <button id="minus" class="count-btn">-</button>
+                            <p id="qty">1</p>
+                            <button id="plus" class="count-btn">+</button>
+                        </div>
+                            <div class="cc-color"><p>Color: W</p></div>
+                            <div class="cc-size"><p>Size: L</p></div>
+                        <div class="cc-price"><p id="item-sum">€21</p></div>
+                    </div>
+                    <p class="remove">Remove</p>
+                </div>
+                </article>
+                <article class="cart-footer">
+                    <p class="shipping"><h3>Shipping:</h3>€6</p>
+                    <p class="total-sum"><h3>Total:</h3>€27</p>
+                    <button class="checkout-btn">CHECKOUT</button>
+                </article>
+            </div>
         </section>
         <section class="gallery-container">
             <h2>Test is this a header</h2>
@@ -44,7 +70,7 @@
                     </select>
                 </div>
                 <div class="add-btn-container">
-                    <button id="add-to-cart-btn">Add to cart</button>
+                    <button class="btn" id="add-to-cart-btn">Add to cart</button>
                 </div>
             </div>
         </section>
