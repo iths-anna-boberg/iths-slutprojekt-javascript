@@ -93,10 +93,11 @@ h3{
 }
 
 .cc-price-sticker{
-    text-align: center;
+    /* text-align: center; */
     border-radius: 50%;
     padding: 1rem;
     border: 1.5px solid black;
+    color: black;
 }
 
 .remove{
@@ -106,12 +107,17 @@ h3{
 .select-container{
     width: 35%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.select-container div{
+    margin: 0;
 }
 
 select{
     font-family: 'ABeeZee', sans-serif; 
-    padding: 1rem;
+    padding: 0.8rem;
     font-size: 1.5rem;
 }
 
@@ -173,7 +179,7 @@ option{
     grid-template-columns: 350px auto 350px;
     grid-template-rows: 200px auto 250px;
     grid-template-areas: 
-    "top top top"
+    "top top price"
     "left text right"
     "bottom bottom right";
 }
@@ -187,11 +193,13 @@ option{
     grid-template-columns: 350px auto 350px;
     grid-template-rows: 200px auto 250px;
     grid-template-areas: 
-    "top top top"
+    "top top price"
     "left text right"
     "bottom bottom right";
     color: white;
 }
+
+
 
 .text-box{
     grid-area: text;
@@ -203,6 +211,7 @@ option{
 .options-bar{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .sizing{
@@ -212,10 +221,10 @@ option{
 .add-btn-container{
     padding: 2rem;
 }
-
+/* 
 .color-selector{
     margin-bottom: 1rem;
-}
+} */
 
 .hidden-cart{
     display: none;
