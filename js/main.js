@@ -9,7 +9,7 @@ class Tshirt{
 
 function Shop(){
     return{
-        shoppingCart: JSON.parse(localStorage.getItem("cartContent")),
+        shoppingCart: JSON.parse(localStorage.getItem("cartContent")) || [],
         sum: 21,
         qtyNr: 1,
         shipCost: 6,
@@ -17,14 +17,21 @@ function Shop(){
         updateShoppingCart(){
             let counter = document.querySelector("#counter");
             this.shoppingCart = JSON.parse(localStorage.getItem("cartContent"));
-            counter.innerText = this.shoppingCart.length;
+            if (!Array.isArray(this.shoppingCart) || !this.shoppingCart.length){
+                counter.innerText = 0;
+            }else{
+                counter.innerText = this.shoppingCart.length;
+            }            
             let clickArea = document.querySelector(".cart-click-handler");
-            clickArea.addEventListener("click", this.showCart(this.shoppingCart))
+            clickArea.addEventListener("click", event=>{
+                this.showCart(this.shoppingCart)
+            })
         },
         
         showCart(shoppingCart){
             let showShoppingCart = document.querySelector("#cart")
             showShoppingCart.className = "show-cart-contents";
+            showShoppingCart.innerHTML = ""
             let yourCart = document.createElement("div");
             showShoppingCart.appendChild(yourCart);
             yourCart.className = "your-cart"
@@ -136,7 +143,7 @@ function Shop(){
             let addToCartBtn = document.querySelector("#add-to-cart-btn")
             let color = "white"
             let noSizePicked = "Please choose a size."
-            let cartItems = this.shoppingCart
+            let cartItems = this.shoppingCart || []
             
             addToCartBtn.addEventListener("click", event=>{
                 let size = document.querySelector("#size-selector").value
