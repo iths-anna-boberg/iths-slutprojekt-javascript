@@ -17,36 +17,12 @@
     </header>
     <div class="wrapper">
         <section class="shopping-cart">
-            <i class="material-icons">shopping_cart</i>
-            <div class="cart-counter"><span id="counter">0</span></div>                        
+            <div class="cart-click-handler">
+                <i class="material-icons">shopping_cart</i>
+                <div class="cart-counter"><span id="counter">0</span></div> 
+            </div>                       
         </section>
-        <section class="show-cart-contents">
-            <div class="your-cart">
-                <article class="cart-content">
-                    <div class="cart-header"><h2>Your cart</h2></div>
-                    <div class="item-container">
-                        <p class="cc-item">"Quotes are stupid"</p>
-                        <div class="specifics">
-                            <div class="cc-qty">
-                                <button id="minus" class="count-btn">-</button>
-                                <p id="qty">1</p>
-                                <button id="plus" class="count-btn">+</button>
-                            </div>
-                            <div class="cc-color"><p>Color: W</p></div>
-                            <div class="cc-size"><p>Size:L</p></div>
-                            <div class="cc-price"><p id="item-sum">€21</p></div>
-                        </div>
-                        <p class="remove">Remove</p>
-                    </div>
-                </article>
-                <article class="cart-footer">
-                    <h3>Shipping:</h3>
-                    <p class="shipping">€6</p>
-                    <h3>Total:</h3>
-                    <p class="total-sum">€27</p>
-                    <button class="btn checkout-btn">CHECKOUT</button>
-                </article>
-            </div>
+        <section id="cart" class="hidden-cart">
         </section>
         <section class="gallery-container">
             <h2>Test is this a header</h2>

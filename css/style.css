@@ -138,6 +138,14 @@ option{
     justify-content: flex-end;
 }
 
+.cart-click-handler{
+    display: flex;
+}
+
+.cart-click-handler:hover{
+    cursor: pointer;
+}
+
 .cart-counter{
     font-size: 0.7rem;
     font-weight: bold;
@@ -209,6 +217,10 @@ option{
     margin-bottom: 1rem;
 }
 
+.hidden-cart{
+    display: none;
+}
+
 .show-cart-contents{
     width: 100%;
     display: flex;
@@ -232,7 +244,7 @@ option{
 
 .item-container{
     width: 100%;
-    margin: 0;
+    margin: 0.5rem 1rem;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -244,7 +256,13 @@ option{
 }
 
 .cart-footer{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin: 0;
+}
+
+.cart-footer p{
+    margin-top: 0;
 }
