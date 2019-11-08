@@ -1,8 +1,11 @@
 class Tshirt{
-    constructor(color,text,size){
+    constructor(id,color,text,size, qty, price){
+        this.id = id;
         this.color = color;
         this.text = text;
         this.size = size;
+        this.qty = qty;
+        this.price = price;
     }
 }
 
@@ -10,8 +13,6 @@ class Tshirt{
 function Shop(){
     return{
         shoppingCart: JSON.parse(localStorage.getItem("cartContent")) || [],
-        sum: 21,
-        qtyNr: 1,
         shipCost: 6,
         
         updateShoppingCart(){
@@ -29,12 +30,19 @@ function Shop(){
         },
         
         showCart(shoppingCart){
+            let price = 0;
             let showShoppingCart = document.querySelector("#cart")
             showShoppingCart.className = "show-cart-contents";
             showShoppingCart.innerHTML = ""
             let yourCart = document.createElement("div");
             showShoppingCart.appendChild(yourCart);
-            yourCart.className = "your-cart"
+            yourCart.className = "your-cart";
+            let closeBtn = document.createElement("button");
+            yourCart.appendChild(closeBtn);
+            closeBtn.innerText = "X";
+            closeBtn.className = "close-btn";
+            closeBtn.addEventListener("click", event=>{
+                showShoppingCart.className = "hidden-cart"})
             let cartContent = document.createElement("article");
             cartContent.className = "cart-content";
             yourCart.appendChild(cartContent);
@@ -48,6 +56,7 @@ function Shop(){
                 let itemContainer = document.createElement("div");
                 cartContent.appendChild(itemContainer);
                 itemContainer.className = "item-container"
+                itemContainer.setAttribute("id", item.id)
                 let ccItem = document.createElement("p");
                 itemContainer.appendChild(ccItem);
                 ccItem.className = "cc-item"
@@ -65,7 +74,7 @@ function Shop(){
                 btnMinus.innerText = "-";
                 let itemQty = document.createElement("p");
                 qty.appendChild(itemQty);
-                itemQty.innerText = this.qtyNr;
+                itemQty.innerText = item.qty;
                 let btnPlus = document.createElement("button");
                 qty.appendChild(btnPlus);
                 btnPlus.className = "count-btn";
@@ -82,19 +91,29 @@ function Shop(){
                 ccSize.className = "cc-size";
                 let shirtSize = document.createElement("p");
                 ccSize.appendChild(shirtSize);
-                shirtSize.innerText = `Color: ${item.size}`;
+                shirtSize.innerText = `Size: ${item.size}`;
 
                 let ccPrice = document.createElement("div");
                 specifics.appendChild(ccPrice);
                 ccPrice.className = "cc-price";
                 let itemSumContainer = document.createElement("p");
                 ccPrice.appendChild(itemSumContainer);
-                itemSumContainer.innerText = `€${this.sum}`;
+                price = item.price * item.qty;
+                itemSumContainer.innerText = `€${price}`;
 
                 let remove = document.createElement("p");
                 itemContainer.appendChild(remove);
                 remove.className = "remove";
                 remove.innerText = "Remove";
+                remove.addEventListener("click", event=>{
+                    let thisTarget = event.target.parentElement;
+                    let id = thisTarget.getAttribute("id");
+                    this.removeItem(id);
+                    this.updateShoppingCart();
+                    showShoppingCart.className = "hidden-cart";
+                    this.showCart(this.shoppingCart);
+
+                })
             }
 
             let cartFooter = document.createElement("article");
@@ -113,12 +132,31 @@ function Shop(){
             let total = document.createElement("p");
             cartFooter.appendChild(total);
             total.className = "total-sum";
-            total.innerText = `€${this.shipCost + this.sum}`
+            let totalSum = this.updateTotal(shoppingCart);
+            total.innerText = `€${totalSum}`
             let checkoutBtn = document.createElement("button");
             cartFooter.appendChild(checkoutBtn);
             checkoutBtn.classList = "btn checkout-btn";
             checkoutBtn.innerText = "CHECKOUT"
-            
+        },
+
+        removeItem(id){
+            let itemArray = JSON.parse(localStorage.getItem("cartContent"));
+            let findId = parseInt(id,10);
+            index = itemArray.findIndex(i=> i.id === findId);
+            itemArray.splice(index,1);
+            console.log(itemArray);
+            localStorage.setItem("cartContent", JSON.stringify(itemArray));
+            this.shoppingCart = JSON.parse(localStorage.getItem("cartContent"));
+            this.updateShoppingCart();
+        },
+
+        updateTotal(shoppingCart){
+            let price = 0;
+            for(item of shoppingCart){
+                price = (item.price * item.qty) + price;
+            }
+            return price+this.shipCost;
         },
         
         colorSelector(){
@@ -155,8 +193,9 @@ function Shop(){
                     if(teeShirt.className == "t-shirt-b"){
                         color = "black"
                     }
-                    let item = new Tshirt(color, teeText, size)
-                    cartItems.push(item)
+                    let id = Date.now();
+                    let item = new Tshirt(id, color, teeText, size, 1, 21);
+                    cartItems.push(item);
                     localStorage.setItem("cartContent", JSON.stringify(cartItems))
                     this.updateShoppingCart()
                     console.log(this.shoppingCart)
