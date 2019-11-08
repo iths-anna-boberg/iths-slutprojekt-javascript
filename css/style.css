@@ -286,3 +286,11 @@ option{
 .cart-footer p{
     margin-top: 0;
 }
+
+.hidden{
+    display: none;
+}
+
+.help{
+    color: red;
+}
