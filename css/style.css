@@ -104,6 +104,10 @@ h3{
     text-decoration: underline;
 }
 
+.remove:hover{
+    cursor: pointer;
+}
+
 .select-container{
     width: 35%;
     display: flex;
