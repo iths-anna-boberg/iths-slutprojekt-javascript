@@ -211,15 +211,51 @@ function Shop(){
             
             colorSelector(){
                 let selector = document.querySelector(".color-selector");
-                let box = document.querySelector("#t-shirt-box")
+                let box = document.querySelector("#t-shirt-box");
                 
                 selector.addEventListener("change", event =>{
-                    let color = event.target.value                 
+                    let color = event.target.value;                 
                     if(color =="B"){
-                        box.className = "t-shirt-b"
+                        box.className = "t-shirt-b";
                     }else{
-                        box.className = "t-shirt-w"
+                        box.className = "t-shirt-w";
                     }
+                })
+            },
+
+            editMode(flag){
+                let textArea = document.createElement("textarea")
+                let textBox = document.querySelector(".text-box");
+
+                if(flag){
+                    let sample = textBox.innerText;
+                    textBox.innerText = ""
+                    textBox.appendChild(textArea);
+                    textArea.value = sample;
+                    textArea.classList = "roboto";
+                    textArea.setAttribute("maxlength", "60")
+                    textArea.focus();
+                    document.addEventListener("focusout", event=>{
+                        textBox.innerText = textArea.value;
+                    })
+                    textArea.addEventListener("keyup", event=>{
+                        if(event.keyCode === "Enter"){ //här är nåt som inte funkar
+                            textBox.innerText = textArea.value;
+
+                        }
+                    })
+                }else{
+                    textBox.innerText = textArea.value;
+                }
+            },
+
+            renderSampleTee(){
+                let textBox = document.querySelector(".text-box");
+                textBox.innerText = "Click here to create your text";
+                textBox.classList ="roboto  text-box";
+
+                textBox.addEventListener("click", ()=>{
+                    this.editMode(true);
                 })
             },
             
@@ -246,11 +282,17 @@ function Shop(){
                         this.updateShoppingCart()
                     }
                 })
+            },
+
+            init(){
+                this.updateShoppingCart();
+                this.colorSelector();
+                this.addToCart();
+                this.renderSampleTee();
             }
         }
     }
     
     let shop = new Shop();
-    shop.updateShoppingCart();
-    shop.colorSelector();
-    shop.addToCart();
+    shop.init();
+    

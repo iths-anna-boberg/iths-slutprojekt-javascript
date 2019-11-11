@@ -220,6 +220,10 @@ option{
     align-items: center;
 }
 
+.text-box:hover{
+    cursor: pointer;
+}
+
 .options-bar{
     display: flex;
     justify-content: space-around;
@@ -294,4 +298,13 @@ option{
 
 .help{
     color: red;
+}
+
+textarea{
+    outline: none;
+    resize: none;
+    overflow: auto;
+    background-color: beige;
+    width: 100%;
+    padding: 0.5rem;
 }
