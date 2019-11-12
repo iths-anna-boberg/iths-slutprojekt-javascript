@@ -241,7 +241,6 @@ function Shop(){
                     textArea.addEventListener("keyup", event=>{
                         if(event.keyCode === "Enter"){ //här är nåt som inte funkar
                             textBox.innerText = textArea.value;
-
                         }
                     })
                 }else{
@@ -279,7 +278,8 @@ function Shop(){
                         let item = new Tshirt(id, color, teeText, size, 1, 21);
                         this.shoppingCart.push(item);
                         this.save();
-                        this.updateShoppingCart()
+                        this.updateShoppingCart();
+                        this.renderSampleTee();
                     }
                 })
             },
