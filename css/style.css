@@ -356,6 +356,81 @@ footer h3{
     text-align: right;
 }
 
+.checkout-input{
+    margin: 0.5rem;
+    padding: 1rem;
+    font-family: cursive;
+    color: darkslateblue;
+}
+
+.done h2{
+    text-align: center;
+}
+
+.thankyou{
+    font-size: 30px;
+    text-align: center;
+}
+
+.payment-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+}
+
+.street{
+    display: flex;
+    flex-direction: column;
+}
+
+.city{
+    display: flex;
+    flex-direction: column;
+}
+
+.zip{
+    display: flex;
+    flex-direction: column;
+}
+.state{
+    display: flex;
+    flex-direction: column;
+}
+
+.country{
+    display: flex;
+    flex-direction: column;
+}
+
+.credit-date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit-card input{
+    width: 85%;
+}
+
+.credit-date input{
+    max-width: 50px;
+}
+
+.cart-header p{
+    text-align: center;
+    padding: 1rem;
+}
+
+.cart-header h2{
+    text-align: center;
+    padding: 1rem;
+}
+
+.payment-details{
+    display: flex;
+    flex-direction: column;
+}
+
 @media only screen and (min-width: 700px) {
     .roboto{
         font-family: 'Roboto', sans-serif;
@@ -460,10 +535,6 @@ footer h3{
         width: 50vw;
         background-color: beige;
     }
-
-    .cart-header p{
-        text-align: center;
-    }
     
     .checkout-basket-footer{
         display: flex; 
@@ -493,6 +564,40 @@ footer h3{
     .total-sum{
         padding-left: 0.5rem;
         font-size: 22px;
+    }
+
+    .payment-details{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 2rem;
+    }
+
+    .credit-card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .credit-card input{
+        max-width: 60%;
+    }
+
+    .name{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .f-name{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .l-name{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
     
     

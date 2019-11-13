@@ -56,19 +56,65 @@
             </article>
         </section>
         <section class="payment-container">
-                First name: <input type="text" value="Leslie" name="fname">
-                Last name: <input type="text" value="Knope" name="lname"><br>
-                Street: <input type="text" value="56 Pawnee High Street" name="street"><br>
-                City: <input type="text" value="Pawnee" name="city">
-                Zip: <input type="text" value="00000" name="zip"><br>
-                State: <input type="text" value="Indiana" name="state"><br>
-                Country: <input type="text" value="US" name="country"><br>
-
-                <div class="credit-card">
-                        Credit card no <input type="text" value="1234567890" name="credit">
-                        Expiry date <input type="text" value="22/01" name="expdate">
- 
+            <div class="cart-header">
+                <h2>We just need to know some things before we can send you your awesome t-shirts!</h2>
+                <p>You're on step 2 of 2</p>
+            </div>
+            <div class="name">
+                <div class="f-name">
+                    <label for="first name">First name:</label>
                 </div>
+                <div class="f-n-form">
+                    <input class="checkout-input" type="text" value="Leslie" name="fname">
+                </div>
+                <div class="l-name">
+                    <label for="last name">Last name:</label>
+                </div>
+                <div class="l-n-form">
+                    <input class="checkout-input" type="text" value="Knope" name="lname">
+                </div>
+            </div>
+            <div class="street">
+                <label for="street">Street:</label>
+                <input class="checkout-input" type="text" value="56 Pawnee High Street" name="street"><br>
+            </div>
+            <div class="city-zip">
+                <div class="city">
+                    <label for="city">City:</label>
+                    <input class="checkout-input" type="text" value="Pawnee" name="city">
+                </div>
+                <div class="zip">
+                    <label for="zip code">Zip: </label>
+                    <input class="checkout-input" type="text" value="00000" name="zip"><br>
+                </div>
+            </div>
+            <div class="state">
+                <label for="state">State:</label>
+                <input class="checkout-input" type="text" value="Indiana" name="state"><br>
+            </div>
+            <div class="country">
+                <label for="country">Country:</label>
+                <input class="checkout-input" type="text" value="US" name="country"><br>
+            </div>
+            <h2>Payment details:</h2>
+            <div class="payment-details">
+                <div class="credit-card">
+                    <label for="credit card">Credit card no:</label>
+                    <input class="checkout-input" type="text" value="1234567890" name="credit">
+                </div>
+                <div class="credit-date">
+                    <label for="expiry date">Expiry date:</label>
+                    <input class="checkout-input" type="text" value="22/01" name="expdate">
+                </div>
+            </div>
+            <button class="btn">Finish</button>
+        </section>
+        <section class="done">
+            <h2>Thank you for your order!</h2>
+            
+            <p class="thankyou">
+                Hope to see you again soon.
+            </p>
         </section>
     </div>
     
