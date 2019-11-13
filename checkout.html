@@ -13,15 +13,14 @@
     <title>Crea-tee checkout</title>
 </head>
 <body>
-    <header>
-        <h1>Crea-tee</h1>
+    <header class="checkout-page">
+        <a href="index.html"><h1>Crea-tee</h1></a>
         <article class="intro">
             <p>Ready to checkout?</p>
             <p>Or <a href="index.html">go back to shopping</a>.</p>
         </article>
     </header>
     <div class="wrapper">
-        <p>This is where we show cart and faux checkout process.</p>
         <section class="hidden">
             <article class="cart-content">
                 <div class="cart-header">
@@ -55,11 +54,11 @@
                 <button class="btn">Next step</button>
             </article>
         </section>
-        <div class="cart-header">
+        <div id="step2" class="cart-header">
             <h2>We just need to know some things before we can send you your awesome t-shirts!</h2>
             <p>You're on step 2 of 2</p>
         </div>
-        <section class="payment-container">
+        <section id="payment-container" class="payment-container">
             <div class="f-name">
                 <label for="first name">First name:</label>
             </div>
@@ -79,7 +78,7 @@
             <div class="zip">
                 <label for="zip code">Zip: </label>
             </div>
-            <input class="checkout-input zip-input" type="text" value="00000" name="zip">
+            <input class="checkout-input zip-input" type="text" value="9999990" name="zip">
             
             <div class="state">
                 <label for="state">State:</label>
@@ -93,20 +92,35 @@
             <div class="credit-card">
                 <label for="credit card">Credit card no:</label>
             </div>
-            <input class="checkout-input credit-card-input" type="text" value="1234567890" name="credit">
+            <input class="checkout-input credit-card-input" type="text" value="1234567890123" name="credit">
             <div class="credit-date">
                 <label for="expiry date">Expiry date:</label>
             </div>
             <input class="checkout-input date" type="text" value="22/01" name="expdate">
         </section>
-        <button class="btn">Finish</button>
-        <section class="done">
+        <button class="btn finish">Finish</button>
+        <section id="done" class="hidden">
             <h2>Thank you for your order!</h2>
             
             <p class="thankyou">
                 Hope to see you again soon.
             </p>
         </section>
+        <footer>
+            <div>
+                <h3>About</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, eius.</p>
+            </div>
+            <div>
+                <h3>Integrity policy</h3>
+                <p>Unde illum quod repellat tempore dolorum possimus, officiis ipsam mollitia rem eaque sunt fugiat et voluptatem quibusdam?</p>
+            </div>
+            <div>
+                <h3>Shipping</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eligendi magnam ea laboriosam architecto possimus, unde aliquid id, dolor corporis, eius nulla.</p>
+            </div>
+        </footer>
+ 
     </div>
     
     <script src="./js/checkout.js"></script>

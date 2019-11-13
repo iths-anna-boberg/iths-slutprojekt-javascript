@@ -180,6 +180,9 @@ export function Shop(){
                 cartFooter.appendChild(checkoutBtn);
                 checkoutBtn.classList = "btn checkout-btn";
                 checkoutBtn.innerText = "CHECKOUT"
+                checkoutBtn.addEventListener("click", ()=>{
+                    window.location.assign("checkout.html")
+                })
             },
             
             removeItem(id){

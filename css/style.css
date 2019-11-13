@@ -20,7 +20,6 @@ h2{
 
 h3{
     font-family: 'Crete Round', serif;
-    
 }
 
 .btn{
@@ -49,7 +48,6 @@ h3{
     font-size: 1.5rem;
     margin: 0.4rem 0.6rem;
     padding: 0.2rem 0.5rem;
-    
 }
 
 button:hover{
@@ -58,6 +56,7 @@ button:hover{
 
 .intro{
     font-size: 25px;
+    text-align: center;
 }
 
 .gallery-container{
@@ -80,13 +79,10 @@ button:hover{
 .cc-qty{
     grid-area: counter;
     display: flex;
-    /* max-height: 2rem;
-    width: 10%; */
     justify-content: center;
     align-items: center;
     font-family: 'Crete Round', serif;
     font-size: 1.8rem;
-    /* padding: 1rem; */
 }
 
 .cc-color{
@@ -112,7 +108,6 @@ button:hover{
 }
 
 .cc-price-sticker{
-    /* text-align: center; */
     border-radius: 50%;
     padding: 1rem;
     border: 1.5px solid black;
@@ -241,7 +236,6 @@ option{
 .options-bar{
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     align-items: center;
     flex-wrap: wrap;
 }
@@ -330,6 +324,10 @@ textarea{
     margin: 0 0.5rem 2rem 0.5rem;
 }
 
+footer{
+    margin-top: 4rem;
+}
+
 footer div{
     margin: 0.5rem;
     padding: 1rem;
@@ -387,6 +385,11 @@ footer h3{
 .payment-details{
     display: flex;
     flex-direction: column;
+}
+
+.checkout-page a{
+    text-decoration: none;
+    color: black;
 }
 
 @media only screen and (min-width: 700px) {
@@ -525,7 +528,7 @@ footer h3{
     }
 
     .payment-container{
-        width: 90vw;
+        width: 50vw;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr  1fr 1fr;
@@ -533,7 +536,8 @@ footer h3{
         grid-template-areas: 
         "f-name f-name l-name l-name"
         "f-name-input f-name-input l-name-input l-name-input"
-        "street street-input street-input street-input"
+        "street . . ."
+        "street-input street-input street-input street-input"
         "city . zip ."
         "city-input city-input zip-input zip-input"
         "state . country ."
@@ -542,20 +546,24 @@ footer h3{
         "number . date ."
         "number-input number-input date-input ."
         ;
+        column-gap: 0.5rem;
         margin-bottom: 2rem;
+        font-size: 20px;
     }
 
     .credit-card{
         grid-area: number;
+        align-self: end;
     }
 
     .credit-card-input{
         grid-area: number-input;
-        width: 100%;
+        justify-self: stretch;
     }
 
     .credit-date{
         grid-area: date;
+        align-self: end;
     }
 
     .date{
@@ -564,65 +572,84 @@ footer h3{
 
     .f-name{
         grid-area: f-name;
+        align-self: end;
     }
 
     .l-name{
         grid-area: l-name;
+        align-self: end;
     } 
 
     .f-n-form{
         grid-area: f-name-input;
-        width: 100%;
+        justify-self: stretch;
     }
 
     .l-n-form{
         grid-area: l-name-input;
-        width: 100%;
+        justify-self: stretch;
     }
 
     .street{
         grid-area: street;
+        align-self: end;
     }
 
     .street-input{
         grid-area: street-input;
-        width: 100%;
+        justify-self: stretch;
     }
 
     .city{
         grid-area: city;
+        align-self: end;
+
     }
 
     .city-input{
         grid-area: city-input;
+        justify-self: stretch;
+
     }
 
     .zip{
         grid-area:  zip;
+        align-self: end;
     }
 
     .zip-input{
         grid-area: zip-input;
+        justify-self: stretch;
+
     }
 
     .state{
         grid-area: state;
+        align-self: end;
+
     }
 
     .state-input{
         grid-area: state-input;
+        justify-self: stretch;
+
     }
 
     .country{
         grid-area: country;
+        align-self: end;
+
     }
 
     .country-input{
         grid-area: country-input;
+        justify-self: stretch;
+
     }
 
     .payment-details{
         grid-area: payment;
+        align-self: end;
     }
 
     
