@@ -253,10 +253,6 @@ option{
 .add-btn-container{
     padding: 2rem;
 }
-/* 
-.color-selector{
-    margin-bottom: 1rem;
-} */
 
 .hidden-cart{
     display: none;
@@ -376,44 +372,6 @@ footer h3{
     display: flex;
     flex-direction: column;
     padding: 0.8rem;
-}
-
-.street{
-    display: flex;
-    flex-direction: column;
-}
-
-.city{
-    display: flex;
-    flex-direction: column;
-}
-
-.zip{
-    display: flex;
-    flex-direction: column;
-}
-.state{
-    display: flex;
-    flex-direction: column;
-}
-
-.country{
-    display: flex;
-    flex-direction: column;
-}
-
-.credit-date{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.credit-card input{
-    width: 85%;
-}
-
-.credit-date input{
-    max-width: 50px;
 }
 
 .cart-header p{
@@ -566,39 +524,107 @@ footer h3{
         font-size: 22px;
     }
 
-    .payment-details{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+    .payment-container{
+        width: 90vw;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr  1fr 1fr;
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-areas: 
+        "f-name f-name l-name l-name"
+        "f-name-input f-name-input l-name-input l-name-input"
+        "street street-input street-input street-input"
+        "city . zip ."
+        "city-input city-input zip-input zip-input"
+        "state . country ."
+        "state-input state-input country-input country-input"
+        "payment payment payment payment"
+        "number . date ."
+        "number-input number-input date-input ."
+        ;
         margin-bottom: 2rem;
     }
 
     .credit-card{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        grid-area: number;
     }
 
-    .credit-card input{
-        max-width: 60%;
+    .credit-card-input{
+        grid-area: number-input;
+        width: 100%;
     }
 
-    .name{
-        display: flex;
-        justify-content: space-evenly;
+    .credit-date{
+        grid-area: date;
+    }
+
+    .date{
+        grid-area: date-input;
     }
 
     .f-name{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        grid-area: f-name;
     }
 
     .l-name{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        grid-area: l-name;
+    } 
+
+    .f-n-form{
+        grid-area: f-name-input;
+        width: 100%;
     }
+
+    .l-n-form{
+        grid-area: l-name-input;
+        width: 100%;
+    }
+
+    .street{
+        grid-area: street;
+    }
+
+    .street-input{
+        grid-area: street-input;
+        width: 100%;
+    }
+
+    .city{
+        grid-area: city;
+    }
+
+    .city-input{
+        grid-area: city-input;
+    }
+
+    .zip{
+        grid-area:  zip;
+    }
+
+    .zip-input{
+        grid-area: zip-input;
+    }
+
+    .state{
+        grid-area: state;
+    }
+
+    .state-input{
+        grid-area: state-input;
+    }
+
+    .country{
+        grid-area: country;
+    }
+
+    .country-input{
+        grid-area: country-input;
+    }
+
+    .payment-details{
+        grid-area: payment;
+    }
+
     
     
     
