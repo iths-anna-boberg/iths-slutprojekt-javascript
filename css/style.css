@@ -155,7 +155,7 @@ option{
 }
 
 .wrapper{
-    max-width: 90vw;
+    max-width: 100vw;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -307,6 +307,7 @@ option{
 
 .cart-footer p{
     margin-top: 0;
+    padding: 1rem;
 }
 
 .hidden{
@@ -342,6 +343,17 @@ footer div{
 
 footer h3{
     text-align: center;
+}
+
+.checkout-cart{
+    margin: 0;
+    width: 100vw;
+    background-color: beige;
+}
+
+.checkout-basket-footer{
+    padding: 1.5rem;
+    text-align: right;
 }
 
 @media only screen and (min-width: 700px) {
@@ -388,6 +400,10 @@ footer h3{
         color: white;
     }
     
+    .wrapper{
+        max-width: 90vw;
+    }
+    
     .roboto{
         font-family: 'Roboto', sans-serif;
         font-size: 4vw;
@@ -403,20 +419,28 @@ footer h3{
         flex-direction: column;
     }
 
+    .how-to h2{
+        text-align: center;
+    }
+
+    .how-to p{
+        padding: 0 1rem 0 1rem;
+    }
+    
     .options-bar{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
     }
-
+    
     .gallery-container{
         display: flex;
         flex-direction: row;
         justify-content: center;
         width: 80vw;
     }
-
+    
     .gallery-container article{
         margin: 1rem;
         padding: 1rem;
@@ -424,12 +448,53 @@ footer h3{
         width: 30vw;
         border-radius: 1.7rem;
     }
-
+    
     footer{
         display: flex;
         justify-content: space-evenly;
     }
 
+    
+    .checkout-cart{
+        margin: 0 auto;
+        width: 50vw;
+        background-color: beige;
+    }
+
+    .cart-header p{
+        text-align: center;
+    }
+    
+    .checkout-basket-footer{
+        display: flex; 
+        justify-content: center;
+        text-align: right;
+    }
+
+    .cost{
+        margin: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .checkout-sum{
+        margin: 0.5rem;   
+        display: flex;  
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .shipping{
+        padding-left: 0.5rem;
+        font-size: 22px;
+    }
+
+    .total-sum{
+        padding-left: 0.5rem;
+        font-size: 22px;
+    }
+    
     
     
 }

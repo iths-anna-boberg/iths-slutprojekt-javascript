@@ -22,6 +22,54 @@
     </header>
     <div class="wrapper">
         <p>This is where we show cart and faux checkout process.</p>
+        <section class="hidden">
+            <article class="cart-content">
+                <div class="cart-header">
+                    <h2>Let's see what we have!</h2>
+                    <p>You're on step 1 of 2</p>
+                </div>
+                <div class="item-container">
+                    <p class="cc-item">"Quotes are stupid"</p>
+                    <div class="specifics">
+                        <div class="cc-qty">
+                            <button id="minus" class="count-btn">-</button>
+                            <p id="qty">1</p>
+                            <button id="plus" class="count-btn">+</button>
+                        </div>
+                        <div class="cc-color"><p>Color: W</p></div>
+                        <div class="cc-size"><p>Size:L</p></div>
+                        <div class="cc-price"><p id="item-sum">€21</p></div>
+                    </div>
+                    <p class="remove">Remove</p>
+                </div>
+            </article>
+            <article class="checkout-basket-footer">
+                <div class="cost">
+                    <h3>Shipping:</h3>
+                    <p class="shipping">€6</p>
+                </div>
+                <div class="checkout-sum">
+                    <h3>Total:</h3>
+                    <p class="total-sum">€27</p>
+                </div>
+                <button class="btn">Next step</button>
+            </article>
+        </section>
+        <section class="payment-container">
+                First name: <input type="text" value="Leslie" name="fname">
+                Last name: <input type="text" value="Knope" name="lname"><br>
+                Street: <input type="text" value="56 Pawnee High Street" name="street"><br>
+                City: <input type="text" value="Pawnee" name="city">
+                Zip: <input type="text" value="00000" name="zip"><br>
+                State: <input type="text" value="Indiana" name="state"><br>
+                Country: <input type="text" value="US" name="country"><br>
+
+                <div class="credit-card">
+                        Credit card no <input type="text" value="1234567890" name="credit">
+                        Expiry date <input type="text" value="22/01" name="expdate">
+ 
+                </div>
+        </section>
     </div>
     
     <script src="./js/checkout.js"></script>
