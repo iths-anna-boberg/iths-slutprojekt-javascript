@@ -56,6 +56,18 @@ button:hover{
     cursor: pointer;
 }
 
+.intro{
+    font-size: 25px;
+}
+
+.gallery-container{
+    margin: 0 0.5rem 1.5rem 0.5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+}
+
 .specifics{
     width: 100%;
     display: grid;
@@ -314,6 +326,24 @@ textarea{
     padding: 0.5rem;
 }
 
+.gallery-container article{
+    padding: 1rem;
+    background-color: beige;
+    border-radius: 1.7rem;
+    margin: 0 0.5rem 2rem 0.5rem;
+}
+
+footer div{
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: beige;
+    border-radius: 1.7rem;
+}
+
+footer h3{
+    text-align: center;
+}
+
 @media only screen and (min-width: 700px) {
     .roboto{
         font-family: 'Roboto', sans-serif;
@@ -375,8 +405,31 @@ textarea{
 
     .options-bar{
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
         align-items: center;
     }
+
+    .gallery-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80vw;
+    }
+
+    .gallery-container article{
+        margin: 1rem;
+        padding: 1rem;
+        background-color: beige;
+        width: 30vw;
+        border-radius: 1.7rem;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    
     
 }

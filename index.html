@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Are you creative? Design your own tee with Crea-tee."/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
@@ -25,17 +27,24 @@
         <section id="cart" class="hidden-cart">
         </section>
         <section class="gallery-container">
-            <img src="./img/jaws@500x500.png" name="slider" alt="Inspiration images" width="500" height="500">
-            <h2>Test is this a header</h2>
-            <p>Is this a text? Is this a text? Yes this is a text.</p>
+            <div class="slideshow">
+                <img src="./img/casablanca@500x500.png" name="slider" alt="Inspiration images" width="500" height="500">
+            </div>
+            <article class="how-to">
+                <h2>Do you have a catch phrase?</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia nobis tempora laboriosam ad sint sunt consequuntur, dignissimos minima vitae nostrum, recusandae ipsam, illum ipsa facilis commodi?</p>
+                <p>Quidem nobis iste, consectetur tempore totam vero beatae maxime delectus!</p>
+            </article>
         </section>
         <section class="create-design">
             <div class="select-container">
-                <select class="color-selector" name="color" id="color-selector">
-                    <option value="default">Choose color:</option>
-                    <option value="W">White</option>
-                    <option value="B">Black</option>
-                </select>
+                <label for="select color">
+                    <select class="color-selector" name="color" id="color-selector">
+                        <option value="default-white">Choose color:</option>
+                        <option value="W">White</option>
+                        <option value="B">Black</option>
+                    </select>
+                </label>
                 
             </div>
             <article id="t-shirt-box" class="t-shirt-w">
@@ -44,13 +53,15 @@
             <div class="options-bar">
                 <p class="hidden" id="help-size">Please choose a size.</p>
                 <div class="sizing">
-                    <select name="Size" id="size-selector">
-                        <option value="not">Select size:</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                    </select>
+                    <label for="select size">
+                        <select name="Size" id="size-selector">
+                            <option value="not">Select size:</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </label>
                 </div>
                 <div class="price-display">
                     <p class="cc-price cc-price-sticker">€21</p>
@@ -60,8 +71,21 @@
                 </div>
             </div>
         </section>
+        <footer>
+            <div>
+                <h3>About</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, eius.</p>
+            </div>
+            <div>
+                <h3>Integrity policy</h3>
+                <p>Unde illum quod repellat tempore dolorum possimus, officiis ipsam mollitia rem eaque sunt fugiat et voluptatem quibusdam?</p>
+            </div>
+            <div>
+                <h3>Shipping</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eligendi magnam ea laboriosam architecto possimus, unde aliquid id, dolor corporis, eius nulla.</p>
+            </div>
+        </footer>
     </div>
-    <!-- <script src="js/gallery.js"></script> -->
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
