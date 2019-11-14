@@ -306,7 +306,6 @@ export function Shop(){
                             this.updateShoppingCart();
                             showShoppingCart.className = "hidden-cart";
                             this.showCart(this.shoppingCart);
-                            
                         })
                     }
                     
@@ -389,6 +388,7 @@ export function Shop(){
             
             editMode(flag){
                 let textArea = document.createElement("textarea")
+                // textArea.setAttribute("type", "text")
                 let textBox = document.querySelector(".text-box");
                 
                 if(flag){
@@ -399,17 +399,21 @@ export function Shop(){
                     textArea.classList = "roboto";
                     textArea.setAttribute("maxlength", "60")
                     textArea.focus();
-                    document.addEventListener("focusout", event=>{
-                        textBox.innerText = textArea.value;
-                    })
+                    
                     textArea.addEventListener("keyup", event=>{
-                        if(event.keyCode === "Enter"){ //här är nåt som inte funkar
-                            textBox.innerText = textArea.value;
+                        if(event.key === "Enter"){ //här är nåt som inte funkar
+                            textArea.blur()
                         }
                     })
                 }else{
                     textBox.innerText = textArea.value;
                 }
+                
+                textArea.addEventListener("focusout", () => {
+                    let input = textArea.value;
+                    flag = false;
+                    textBox.innerText = input;
+                })
             },
             
             renderSampleTee(){
@@ -457,6 +461,4 @@ export function Shop(){
         }
     }
     
-    // let shop = new Shop();
-    // shop.init();
     

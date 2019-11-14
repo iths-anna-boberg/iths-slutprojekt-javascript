@@ -218,8 +218,6 @@ option{
     color: white;
 }
 
-
-
 .text-box{
     grid-area: text;
     display: flex;
@@ -608,13 +606,11 @@ footer h3{
     .city{
         grid-area: city;
         align-self: end;
-
     }
 
     .city-input{
         grid-area: city-input;
         justify-self: stretch;
-
     }
 
     .zip{
@@ -625,31 +621,26 @@ footer h3{
     .zip-input{
         grid-area: zip-input;
         justify-self: stretch;
-
     }
 
     .state{
         grid-area: state;
         align-self: end;
-
     }
 
     .state-input{
         grid-area: state-input;
         justify-self: stretch;
-
     }
 
     .country{
         grid-area: country;
         align-self: end;
-
     }
 
     .country-input{
         grid-area: country-input;
         justify-self: stretch;
-
     }
 
     .payment-details{
