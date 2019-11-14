@@ -94,6 +94,7 @@ export function Shop(){
                         if(qtyCounter==0){
                             this.removeItem(qtyTargetId);
                             this.save();
+                            this.renderCheckoutCart();                    
                         }else{
                             this.changeQtyCheckout(qtyTargetId, qtyCounter);
                             this.save();
@@ -388,7 +389,6 @@ export function Shop(){
             
             editMode(flag){
                 let textArea = document.createElement("textarea")
-                // textArea.setAttribute("type", "text")
                 let textBox = document.querySelector(".text-box");
                 
                 if(flag){
@@ -401,7 +401,7 @@ export function Shop(){
                     textArea.focus();
                     
                     textArea.addEventListener("keyup", event=>{
-                        if(event.key === "Enter"){ //här är nåt som inte funkar
+                        if(event.key === "Enter"){ 
                             textArea.blur()
                         }
                     })
