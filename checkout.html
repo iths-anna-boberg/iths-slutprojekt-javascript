@@ -15,50 +15,16 @@
 <body>
     <header class="checkout-page">
         <a href="index.html"><h1>Crea-tee</h1></a>
-        <article class="intro">
-            <p>Ready to checkout?</p>
-            <p>Or <a href="index.html">go back to shopping</a>.</p>
-        </article>
     </header>
     <div class="wrapper">
-        <section class="hidden">
-            <article class="cart-content">
-                <div class="cart-header">
-                    <h2>Let's see what we have!</h2>
-                    <p>You're on step 1 of 2</p>
-                </div>
-                <div class="item-container">
-                    <p class="cc-item">"Quotes are stupid"</p>
-                    <div class="specifics">
-                        <div class="cc-qty">
-                            <button id="minus" class="count-btn">-</button>
-                            <p id="qty">1</p>
-                            <button id="plus" class="count-btn">+</button>
-                        </div>
-                        <div class="cc-color"><p>Color: W</p></div>
-                        <div class="cc-size"><p>Size:L</p></div>
-                        <div class="cc-price"><p id="item-sum">€21</p></div>
-                    </div>
-                    <p class="remove">Remove</p>
-                </div>
-            </article>
-            <article class="checkout-basket-footer">
-                <div class="cost">
-                    <h3>Shipping:</h3>
-                    <p class="shipping">€6</p>
-                </div>
-                <div class="checkout-sum">
-                    <h3>Total:</h3>
-                    <p class="total-sum">€27</p>
-                </div>
-                <button class="btn">Next step</button>
-            </article>
+        <section id="checkout-cart" class="hidden">
+            
         </section>
-        <div id="step2" class="cart-header">
+        <div id="step2" class="hidden">
             <h2>We just need to know some things before we can send you your awesome t-shirts!</h2>
             <p>You're on step 2 of 2</p>
         </div>
-        <section id="payment-container" class="payment-container">
+        <section id="payment-container" class="hidden">
             <div class="f-name">
                 <label for="first name">First name:</label>
             </div>
@@ -98,7 +64,7 @@
             </div>
             <input class="checkout-input date" type="text" value="22/01" name="expdate">
         </section>
-        <button class="btn finish">Finish</button>
+        <button id="finish" class="hidden btn">Finish</button>
         <section id="done" class="hidden">
             <h2>Thank you for your order!</h2>
             
@@ -108,12 +74,12 @@
         </section>
         <footer>
             <div>
-                <h3>About</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, eius.</p>
-            </div>
-            <div>
                 <h3>Integrity policy</h3>
                 <p>Unde illum quod repellat tempore dolorum possimus, officiis ipsam mollitia rem eaque sunt fugiat et voluptatem quibusdam?</p>
+            </div>
+            <div>
+                <h3>About</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, eius.</p>
             </div>
             <div>
                 <h3>Shipping</h3>
@@ -123,6 +89,6 @@
  
     </div>
     
-    <script src="./js/checkout.js"></script>
+    <script type="module" src="./js/checkout.js"></script>
 </body>
 </html>
