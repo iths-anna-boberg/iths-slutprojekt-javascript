@@ -3,4 +3,4 @@ import {galleryIndex, gallery} from "./gallery.js"
 
 let shop = new Shop();
 shop.init();
-setInterval(gallery, 6500);
+setInterval(gallery, 7000);

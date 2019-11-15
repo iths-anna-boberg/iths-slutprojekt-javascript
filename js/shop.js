@@ -23,16 +23,14 @@ export function Shop(){
         
         updateShoppingCart(){
             let counter = document.querySelector("#counter");
-            // this.shoppingCart = JSON.parse(localStorage.getItem("cartContent"));
             if (!Array.isArray(this.shoppingCart) || !this.shoppingCart.length){
                 counter.innerText = 0;
             }else{
-                // counter.innerText = this.shoppingCart.length;
                 counter.innerText = this.shoppingCartSumItems()
             }            
             let clickArea = document.querySelector(".cart-click-handler");
             clickArea.addEventListener("click", event=>{
-                this.showCart(this.shoppingCart)
+                this.showCart()
             })
         },
         
@@ -194,7 +192,7 @@ export function Shop(){
             }
         },
         
-        showCart(shoppingCart){
+        showCart(){
             let price = 0;
             let showShoppingCart = document.querySelector("#cart")
             showShoppingCart.className = "show-cart-contents";
@@ -221,7 +219,7 @@ export function Shop(){
                 }
                 else{
                     h2.innerText = "Your cart";
-                    for(let item of shoppingCart){
+                    for(let item of this.shoppingCart){
                         let itemContainer = document.createElement("div");
                         cartContent.appendChild(itemContainer);
                         itemContainer.className = "item-container"
@@ -326,7 +324,7 @@ export function Shop(){
                     let total = document.createElement("p");
                     cartFooter.appendChild(total);
                     total.className = "total-sum";
-                    let totalSum = this.updateTotal(shoppingCart);
+                    let totalSum = this.updateTotal(this.shoppingCart);
                     total.innerText = `€${totalSum}`
                     let checkoutBtn = document.createElement("button");
                     cartFooter.appendChild(checkoutBtn);
